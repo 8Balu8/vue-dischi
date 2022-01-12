@@ -10,6 +10,9 @@
         <div class="disc-info">
             {{contentOfCard.year}}
         </div>
+        <div class="genre">
+            {{contentOfCard.genre}}
+        </div>
     </div>
 </template>
 
@@ -40,11 +43,16 @@ export default {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
-        margin: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .disc-info {
         color: gray;
+    }
+
+    .genre {
+        margin-top: 20px;
     }
 }
 

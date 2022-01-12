@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <Main/>
+    <Header @selectChanged="setGenre" :genres="genresList"/>
+    <Main :filterGenre="selectGenre" @genresListCreated="setGenresList"/>
   </div>
 </template>
 
@@ -15,6 +15,20 @@ export default {
     Header,
     Main
   },
+  data: function() {
+    return {
+      selectGenre: '',
+      genresList: []
+    };
+  },
+  methods: {
+    setGenre: function(genre) {
+      this.selectGenre = genre;
+    },
+    setGenresList: function(genres) {
+      this.genresList = genres;
+    }
+  }
 };
 </script>
 
